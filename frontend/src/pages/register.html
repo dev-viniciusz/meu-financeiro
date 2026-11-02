@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Criar conta | Meu Financeiro</title>
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="stylesheet" href="../css/register.css" />
+    </head>
+    <body>
+        <main class="register-screen">
+            <section class="register-panel" aria-labelledby="register-title">
+                <img
+                    src="../assets/logo/logo.svg"
+                    class="register-brand"
+                    alt="Meu Financeiro"
+                />
+
+                <form class="register-form" novalidate>
+                    <header class="register-heading">
+                        <h1 id="register-title">Criar nova conta</h1>
+                        <p>Insira seus dados</p>
+                    </header>
+
+                    <div class="register-fields">
+                        <label class="register-field">
+                            <span>Nome completo</span>
+                            <input
+                                id="full-name"
+                                type="text"
+                                name="fullName"
+                                required
+                                placeholder="Digite seu nome"
+                                autocomplete="name"
+                                aria-describedby="full-name-error"
+                            />
+                            <span
+                                class="register-error"
+                                id="full-name-error"
+                                aria-live="polite"
+                            ></span>
+                        </label>
+                        <label class="register-field">
+                            <span>E-mail</span>
+                            <input
+                                id="register-email"
+                                type="email"
+                                name="email"
+                                required
+                                placeholder="example@gmail.com"
+                                autocomplete="email"
+                                aria-describedby="register-email-error"
+                            />
+                            <span
+                                class="register-error"
+                                id="register-email-error"
+                                aria-live="polite"
+                            ></span>
+                        </label>
+                        <label class="register-field">
+                            <span>Senha</span>
+                            <input
+                                id="register-password"
+                                type="password"
+                                name="password"
+                                required
+                                placeholder="•••••••"
+                                autocomplete="new-password"
+                                aria-describedby="register-password-error"
+                            />
+                            <span
+                                class="register-error"
+                                id="register-password-error"
+                                aria-live="polite"
+                            ></span>
+                        </label>
+                    </div>
+
+                    <div class="register-bottom">
+                        <button type="submit" class="register-button">
+                            Criar conta
+                        </button>
+                        <p class="register-footer">
+                            Já tem uma conta?
+                            <a href="login.html">Entre</a>
+                        </p>
+                    </div>
+                </form>
+            </section>
+
+            <div class="register-illustration">
+                <img
+                    src="../assets/images/register.svg"
+                    alt="Ilustração de uma pessoa caminhando entre campos de cadastro"
+                />
+            </div>
+        </main>
+        <script src="../js/api.js"></script>
+        <script src="../js/register.js"></script>
+    </body>
+</html>

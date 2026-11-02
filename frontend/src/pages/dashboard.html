@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard | Meu Financeiro</title>
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="stylesheet" href="../css/app.css" />
+        <link rel="stylesheet" href="../css/dashboard.css" />
+    </head>
+    <body data-page="dashboard">
+        <div class="app-layout">
+            <div id="sidebar-slot"></div>
+            <button
+                class="sidebar-backdrop"
+                id="sidebar-backdrop"
+                type="button"
+                aria-label="Fechar menu"
+                hidden
+            ></button>
+            <main class="app-main dashboard-main">
+                <header class="mobile-header">
+                    <button
+                        class="menu-toggle"
+                        id="menu-toggle"
+                        type="button"
+                        aria-label="Abrir menu"
+                        aria-controls="app-sidebar"
+                        aria-expanded="false"
+                    >
+                        ☰
+                    </button>
+                    <span class="mobile-brand">Meu Financeiro</span>
+                </header>
+                <header class="page-heading">
+                    <h1>Dashboard</h1>
+                    <p>
+                        Acompanhe seu mês com clareza e mantenha as contas em
+                        dia.
+                    </p>
+                </header>
+
+                <section class="summary-grid" aria-label="Resumo financeiro">
+                    <article class="summary-card">
+                        <div class="summary-header">
+                            <h2>Saldo atual</h2>
+                            <img src="../assets/icons/saldo_atual.svg" alt="" />
+                        </div>
+                        <p class="summary-value" id="summary-balance">
+                            R$ 3.525,40
+                        </p>
+                    </article>
+                    <article class="summary-card">
+                        <div class="summary-header">
+                            <h2>Despesas fixas</h2>
+                            <img
+                                src="../assets/icons/despesa_fixa.svg"
+                                alt=""
+                            />
+                        </div>
+                        <p class="summary-value" id="summary-fixed">
+                            R$ 1.611,90
+                        </p>
+                    </article>
+                    <article class="summary-card">
+                        <div class="summary-header">
+                            <h2>Despesas avulsas</h2>
+                            <img
+                                src="../assets/icons/despesa_avulsa.svg"
+                                alt=""
+                            />
+                        </div>
+                        <p class="summary-value" id="summary-variable">
+                            R$ 598,90
+                        </p>
+                    </article>
+                    <article class="summary-card">
+                        <div class="summary-header">
+                            <h2>Rendas no mês</h2>
+                            <img src="../assets/icons/rendas.svg" alt="" />
+                        </div>
+                        <p class="summary-value" id="summary-income">
+                            R$ 5.736,20
+                        </p>
+                    </article>
+                </section>
+
+                <section
+                    class="panel transactions-panel"
+                    aria-labelledby="transactions-title"
+                >
+                    <header class="panel-heading">
+                        <div>
+                            <h2 id="transactions-title">
+                                Últimas movimentações
+                            </h2>
+                            <p>Atualizações mais recentes do saldo</p>
+                        </div>
+                        <a class="panel-action" href="history.html"
+                            >Ver todas</a
+                        >
+                    </header>
+                    <ul
+                        class="transaction-list"
+                        id="recent-list"
+                        aria-live="polite"
+                    >
+                        <li class="transaction-row">
+                            <span class="transaction-copy"
+                                ><strong>Salário mensal</strong
+                                ><small>Renda · 01/10/2026</small></span
+                            ><span class="transaction-amount positive"
+                                >+ R$ 5.200,00</span
+                            >
+                        </li>
+                        <li class="transaction-row">
+                            <span class="transaction-copy"
+                                ><strong>Aluguel</strong
+                                ><small>Despesa fixa · 05/10/2026</small></span
+                            ><span class="transaction-amount negative"
+                                >− R$ 1.350,00</span
+                            >
+                        </li>
+                        <li class="transaction-row">
+                            <span class="transaction-copy"
+                                ><strong>Supermercado</strong
+                                ><small>Despesa avulsa · 08/10/2026</small></span
+                            ><span class="transaction-amount negative"
+                                >− R$ 286,40</span
+                            >
+                        </li>
+                        <li class="transaction-row">
+                            <span class="transaction-copy"
+                                ><strong>Rendimento CDB</strong
+                                ><small>Renda · 10/10/2026</small></span
+                            ><span class="transaction-amount positive"
+                                >+ R$ 86,20</span
+                            >
+                        </li>
+                        <li class="transaction-row">
+                            <span class="transaction-copy"
+                                ><strong>Conta de luz</strong
+                                ><small>Despesa fixa · 11/10/2026</small></span
+                            ><span class="transaction-amount negative"
+                                >− R$ 142,90</span
+                            >
+                        </li>
+                        <li class="transaction-row">
+                            <span class="transaction-copy"
+                                ><strong>Internet</strong
+                                ><small>Despesa fixa · 12/10/2026</small></span
+                            ><span class="transaction-amount negative"
+                                >− R$ 119,00</span
+                            >
+                        </li>
+                        <li class="transaction-row">
+                            <span class="transaction-copy"
+                                ><strong>Cartão de crédito</strong
+                                ><small>Despesa avulsa · 13/10/2026</small></span
+                            ><span class="transaction-amount negative"
+                                >− R$ 312,50</span
+                            >
+                        </li>
+                        <li class="transaction-row">
+                            <span class="transaction-copy"
+                                ><strong>Transferência recebida</strong
+                                ><small>Renda · 14/10/2026</small></span
+                            ><span class="transaction-amount positive"
+                                >+ R$ 450,00</span
+                            >
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+        <script src="../js/api.js"></script>
+        <script src="../js/finance-store.js"></script>
+        <script src="../js/app-shell.js"></script>
+        <script src="../js/dashboard.js"></script>
+    </body>
+</html>

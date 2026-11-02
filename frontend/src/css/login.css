@@ -1,0 +1,152 @@
+.login {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+}
+
+.left {
+    flex: 1;
+    min-height: 100vh;
+    padding-top: 37px;
+    padding-left: 135px;
+}
+
+.logo {
+    display: block;
+    margin-bottom: 122px;
+}
+
+.forms {
+    width: 404px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.welcome h1 {
+    color: #173332;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.welcome p {
+    color: #667c79;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.forms label p {
+    height: 37px;
+    display: flex;
+    align-items: center;
+    color: #173332;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.forms input {
+    display: block;
+    width: 404px;
+    height: 48px;
+    padding: 0 20px;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    border-color: #e9e9e6;
+    color: #667c79;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.forms input::placeholder {
+    color: #667c79;
+    opacity: 1;
+}
+
+.password input::placeholder {
+    letter-spacing: 4px;
+}
+
+.forms input:focus {
+    outline: none;
+    border-color: #16877e;
+}
+
+.error:not(:empty) {
+    display: block;
+    margin-top: 4px;
+    color: red;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.forgot-password {
+    color: #173332;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    text-decoration: none;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-entrar {
+    width: 404px;
+    height: 47px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #0f615b;
+    color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-text {
+    color: #929eae;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.register-link {
+    color: #173332;
+    text-decoration: none;
+}
+
+.right {
+    position: absolute;
+    top: 84px;
+    right: 18px;
+    width: 680px;
+}
+
+.right img {
+    display: block;
+    width: 680px;
+    height: auto;
+}

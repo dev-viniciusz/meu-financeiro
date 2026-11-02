@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Anotações | Meu Financeiro</title>
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="stylesheet" href="../css/app.css" />
+    </head>
+    <body data-page="notes">
+        <div class="app-layout">
+            <div id="sidebar-slot"></div>
+            <button class="sidebar-backdrop" id="sidebar-backdrop" type="button" aria-label="Fechar menu" hidden></button>
+
+            <main class="app-main">
+                <header class="mobile-header">
+                    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="app-sidebar" aria-expanded="false">☰</button>
+                    <span class="mobile-brand">Meu Financeiro</span>
+                </header>
+
+                <header class="page-heading page-title-row">
+                    <div>
+                        <h1>Anotações</h1>
+                        <p>Guarde lembretes pessoais junto com sua organização financeira.</p>
+                    </div>
+                    <button class="primary-button" id="toggle-form" type="button">＋ Nova anotação</button>
+                </header>
+
+                <section class="panel form-panel" id="form-panel" hidden>
+                    <header class="panel-heading">
+                        <div>
+                            <h2 id="form-title">Criar anotação</h2>
+                            <p>Use um título e escreva os detalhes que deseja lembrar.</p>
+                        </div>
+                    </header>
+                    <form id="note-form" novalidate>
+                        <input id="note-id" type="hidden" />
+                        <div class="form-grid">
+                            <label class="form-field">
+                                Título
+                                <input id="note-title" type="text" maxlength="100" required placeholder="Ex.: Renovar seguro do carro" />
+                            </label>
+                            <label class="form-field">
+                                Data (opcional)
+                                <input id="note-date" type="text" data-date-input inputmode="numeric" maxlength="10" placeholder="DD/MM/AAAA" />
+                            </label>
+                            <label class="form-field form-field-wide">
+                                Conteúdo
+                                <textarea id="note-content" maxlength="1000" required placeholder="O que você quer lembrar?"></textarea>
+                            </label>
+                        </div>
+                        <p class="form-message" id="note-message" aria-live="polite"></p>
+                        <div class="form-actions">
+                            <button class="secondary-button" id="cancel-form" type="button">Cancelar</button>
+                            <button class="primary-button" type="submit">Salvar anotação</button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="panel records-panel">
+                    <header class="panel-heading">
+                        <div>
+                            <h2>Suas anotações</h2>
+                            <p>Lembretes pessoais cadastrados</p>
+                        </div>
+                    </header>
+                    <div class="record-list" id="note-list" aria-live="polite"></div>
+                </section>
+            </main>
+        </div>
+
+        <script src="../js/api.js"></script>
+        <script src="../js/finance-store.js"></script>
+        <script src="../js/date-input.js"></script>
+        <script src="../js/app-shell.js"></script>
+        <script src="../js/notes.js"></script>
+    </body>
+</html>

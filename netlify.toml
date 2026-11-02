@@ -1,0 +1,3 @@
+# Netlify hospeda só o front (arquivos estáticos). O backend Java roda em outro lugar.
+[build]
+  publish = "frontend/src"

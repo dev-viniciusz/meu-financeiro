@@ -1,0 +1,141 @@
+.register-screen {
+    position: relative;
+    min-height: 100vh;
+}
+
+.register-panel {
+    min-height: 100vh;
+    padding-top: 43px;
+    padding-left: 135px;
+}
+
+.register-brand {
+    display: block;
+    margin-bottom: 92px;
+}
+
+.register-form {
+    width: 404px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.register-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.register-heading h1 {
+    color: #173332;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.register-heading p {
+    color: #667c79;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.register-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.register-field {
+    width: 404px;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-field > span {
+    height: 37px;
+    flex: 0 0 37px;
+    display: flex;
+    align-items: center;
+    color: #173332;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.register-field input {
+    width: 404px;
+    height: 48px;
+    flex: 0 0 48px;
+    padding: 0 20px;
+    border: 1px solid #e9e9e6;
+    border-radius: 10px;
+    color: #667c79;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.register-field input:focus {
+    outline: none;
+    border-color: #16877e;
+}
+
+.register-field input::placeholder {
+    color: #667c79;
+    opacity: 1;
+}
+
+.register-field:last-child input::placeholder {
+    letter-spacing: 4px;
+}
+
+.register-error:not(:empty) {
+    display: block;
+    margin-top: 4px;
+    color: red;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.register-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.register-button {
+    width: 404px;
+    height: 47px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #0f615b;
+    color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-footer {
+    color: #929eae;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.register-footer a {
+    color: #000;
+    text-decoration: none;
+}
+
+.register-illustration {
+    position: absolute;
+    top: 134px;
+    right: 42.51px;
+}
+
+.register-illustration img {
+    display: block;
+    width: 729.485px;
+    height: auto;
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meu Financeiro</title>
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="stylesheet" href="../css/login.css" />
+    </head>
+    <body>
+        <main class="login">
+            <div class="left">
+                <img src="../assets/logo/logo.svg" class="logo" alt="Meu Financeiro" />
+                <form action="" class="forms" novalidate>
+                    <div class="welcome">
+                        <h1>Bem-Vindo</h1>
+                        <p>Por favor, entre com seus dados abaixo</p>
+                    </div>
+                    <div class="main">
+                        <div class="fields">
+                            <label class="email">
+                                <p>Email</p>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    required
+                                    placeholder="Digite seu email"
+                                />
+                                <span class="error" id="email-error"></span>
+                            </label>
+                            <label class="password">
+                                <p>Senha</p>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    required
+                                    placeholder="•••••••"
+                                />
+                                <span class="error" id="password-error"></span>
+                            </label>
+                        </div>
+                        <a href="" class="forgot-password">Esqueci a senha</a>
+                    </div>
+                    <div class="bottom">
+                        <button type="submit" class="btn-entrar">Entrar</button>
+                        <p class="register-text">
+                            Não tem uma conta?
+                            <a href="register.html" class="register-link">Cadastra-se aqui</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <div class="right">
+                <img src="../assets/images/login.svg" class="img-login" alt="Ilustração de uma pessoa entrando" />
+            </div>
+        </main>
+        <script src="../js/api.js"></script>
+        <script src="../js/login.js"></script>
+    </body>
+</html>

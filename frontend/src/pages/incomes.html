@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rendas | Meu Financeiro</title>
+        <link rel="stylesheet" href="../css/global.css" />
+        <link rel="stylesheet" href="../css/app.css" />
+    </head>
+    <body data-page="incomes">
+        <div class="app-layout">
+            <div id="sidebar-slot"></div>
+            <button
+                class="sidebar-backdrop"
+                id="sidebar-backdrop"
+                type="button"
+                aria-label="Fechar menu"
+                hidden
+            ></button>
+            <main class="app-main">
+                <header class="mobile-header">
+                    <button
+                        class="menu-toggle"
+                        id="menu-toggle"
+                        type="button"
+                        aria-label="Abrir menu"
+                        aria-controls="app-sidebar"
+                        aria-expanded="false"
+                    >
+                        ☰</button
+                    ><span class="mobile-brand">Meu Financeiro</span>
+                </header>
+                <header class="page-heading page-title-row">
+                    <div>
+                        <h1>Rendas</h1>
+                        <p>
+                            Visualize suas fontes de entrada e como cada
+                            movimentação atualiza o saldo.
+                        </p>
+                    </div>
+                    <button
+                        class="primary-button"
+                        id="toggle-form"
+                        type="button"
+                    >
+                        ＋ Adicionar renda
+                    </button>
+                </header>
+                <section class="panel form-panel" id="form-panel" hidden>
+                    <header class="panel-heading">
+                        <div>
+                            <h2 id="form-title">Cadastrar renda</h2>
+                            <p>
+                                Informe a descrição, o valor e a data de
+                                recebimento.
+                            </p>
+                        </div>
+                    </header>
+                    <form id="record-form" novalidate>
+                        <input id="record-id" type="hidden" />
+                        <div class="form-grid">
+                            <label class="form-field"
+                                >Descrição<input
+                                    id="record-description"
+                                    name="description"
+                                    type="text"
+                                    maxlength="100"
+                                    required
+                                    placeholder="Ex.: Salário mensal"
+                            /></label>
+                            <label class="form-field"
+                                >Valor<input
+                                    id="record-amount"
+                                    name="amount"
+                                    type="number"
+                                    min="0.01"
+                                    step="0.01"
+                                    required
+                                    placeholder="0,00"
+                            /></label>
+                            <label class="form-field"
+                                >Data<input
+                                    id="record-date"
+                                    name="date"
+                                    type="text"
+                                    data-date-input
+                                    inputmode="numeric"
+                                    maxlength="10"
+                                    placeholder="DD/MM/AAAA"
+                                    required
+                            /></label>
+                        </div>
+                        <p
+                            class="form-message"
+                            id="form-message"
+                            aria-live="polite"
+                        ></p>
+                        <div class="form-actions">
+                            <button
+                                class="secondary-button"
+                                id="cancel-form"
+                                type="button"
+                            >
+                                Cancelar</button
+                            ><button class="primary-button" type="submit">
+                                Salvar renda
+                            </button>
+                        </div>
+                    </form>
+                </section>
+                <section class="panel records-panel">
+                    <header class="panel-heading">
+                        <div>
+                            <h2>Fontes de renda</h2>
+                            <p>Entradas registradas</p>
+                        </div>
+                    </header>
+                    <div
+                        class="record-list"
+                        id="record-list"
+                        aria-live="polite"
+                    ></div>
+                </section>
+            </main>
+        </div>
+        <script src="../js/api.js"></script>
+        <script src="../js/finance-store.js"></script>
+        <script src="../js/date-input.js"></script>
+        <script src="../js/app-shell.js"></script>
+        <script src="../js/records.js"></script>
+    </body>
+</html>
