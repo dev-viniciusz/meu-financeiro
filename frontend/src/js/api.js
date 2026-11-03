@@ -1,7 +1,7 @@
 // Conversa com o backend (API Java): endereço, token de login e função de requisição.
 (function () {
     
-    const PRODUCTION_API_URL = "https://SEU-BACKEND.onrender.com";
+    const PRODUCTION_API_URL = "https://meu-financeiro-dcsi.onrender.com";
 
     const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
     const API_URL = isLocal ? "http://localhost:8080" : PRODUCTION_API_URL;
