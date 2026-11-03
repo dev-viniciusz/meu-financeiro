@@ -1,6 +1,6 @@
 // Conversa com o backend (API Java): endereço, token de login e função de requisição.
 (function () {
-    // ⚠️ Depois de hospedar o backend, troque pela URL dele (sem barra no final).
+    
     const PRODUCTION_API_URL = "https://SEU-BACKEND.onrender.com";
 
     const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
